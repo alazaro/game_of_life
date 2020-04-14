@@ -15,7 +15,7 @@ class Config:
     on_color = pygame.Color(255, 255, 255)
     off_color = pygame.Color(50, 50, 50)
     max_fps = 100
-    seed = 1
+    seed = None
     alive_cells_at_start = 0.1
     title = 'Game of Life'
 
