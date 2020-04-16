@@ -5,20 +5,20 @@ from typing import Sequence, Tuple
 import pygame
 from pygame import locals as gl
 
-Point = Tuple[int, int]
+Point = Size = Tuple[int, int]
 BoolMatrix = Sequence[Sequence[bool]]
 
 
 class Config:
-    board_size = 100, 100
-    cell_size = 5, 5
+    board_size: Size = 100, 100
+    cell_size: Size = 5, 5
     on_color = pygame.Color(255, 255, 255)
     off_color = pygame.Color(50, 50, 50)
-    max_fps = 0  # 0 => No limit
-    seed = None
-    alive_cells_at_start = 0.6  # 0 to 1
-    title = 'Game of Life'
-    rules = 'b3s23'  # https://catagolue.appspot.com/rules
+    max_fps: int = 0  # 0 => No limit
+    seed: int = None
+    alive_cells_at_start: float = 0.6  # 0 to 1
+    title: str = 'Game of Life'
+    rules: str = 'b3s23'  # https://catagolue.appspot.com/rules
 
 
 class RenderDirty(pygame.sprite.RenderPlain):
