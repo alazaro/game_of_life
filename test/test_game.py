@@ -1,4 +1,12 @@
+import pytest
+
 from src.game import Board, Config
+
+
+@pytest.fixture(scope='module', autouse=True)
+def config_():
+    Config.alive_cells_at_start = 0
+    Config.board_size = 5, 5
 
 
 def test_create_board():
