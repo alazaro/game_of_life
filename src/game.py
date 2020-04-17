@@ -1,6 +1,6 @@
 import random
 import re
-from typing import Sequence, Tuple
+from typing import Optional, Sequence, Tuple
 
 import pygame
 from pygame import locals as gl
@@ -15,7 +15,7 @@ class Config:
     on_color = pygame.Color(255, 255, 255)
     off_color = pygame.Color(50, 50, 50)
     max_fps: int = 0  # 0 => No limit
-    seed: int = None
+    seed: Optional[int] = None
     alive_cells_at_start: float = 0.6  # 0 to 1
     title: str = 'Game of Life'
     rules: str = 'b3s23'  # https://catagolue.appspot.com/rules
